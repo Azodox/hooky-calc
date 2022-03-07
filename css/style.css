@@ -1,3 +1,13 @@
 body {
-    background-color: #023047;
+    background-color: #DEAAFF;
+}
+
+.object-name {
+    display: inline-block;
+    border: 2px solid #E2AFFF;
+}
+
+.amount {
+    background: transparent;
+    width: 50px;
 }
