@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("/fonts/OpenSans.woff2") format("woff2");
+    src: url("fonts/OpenSans.woff2") format("woff2");
 }
 
 ::-moz-selection {
@@ -16,7 +16,7 @@
 body {
     font-family: "Open Sans";
     background-color: #DEAAFF;
-    background-image: url("/background.png")
+    background-image: url("background.png")
 }
 
 body input[type=number]{
