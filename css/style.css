@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("fonts/OpenSans.woff2") format("woff2");
+    src: url("https://azodox.github.io/uwu-calc/fonts/OpenSans.woff2") format("woff2");
 }
 
 ::-moz-selection {
@@ -15,7 +15,7 @@
 
 body {
     font-family: "Open Sans";
-    background-image: url("background.png")
+    background-image: url("https://azodox.github.io/uwu-calc/background.png")
 }
 
 body input[type=number]{
