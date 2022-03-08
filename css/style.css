@@ -3,18 +3,31 @@
     src: url("/fonts/OpenSans.woff2") format("woff2");
 }
 
+::-moz-selection {
+    color: white;
+    background-color: black;
+}
+
+::selection {
+    color: white;
+    background-color: black;
+}
+
 body {
     font-family: "Open Sans";
     background-color: #DEAAFF;
+    background-image: url("/background.png")
 }
 
 body input[type=number]{
+    font-size: 15px;
+    color: white;
     border: 2px solid #F3C4FB;
 }
 
 body input[type=number]:hover{
-    border: 4px solid #FFF;
-    color: white;
+    border: 4px solid #E5B3FE;
+    color: #E5B3FE;
 }
 
 .category-name {
@@ -22,7 +35,7 @@ body input[type=number]:hover{
     text-decoration: underline;
 }
 
-.drinks {
+#drinks {
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -30,8 +43,10 @@ body input[type=number]:hover{
 }
 
 .object-name {
+    color: black;
     display: inline-block;
     padding: 4px;
+    background-color: #D0D1FF;
 }
 
 .amount {
@@ -44,20 +59,38 @@ body input[type=number]:hover{
     margin-bottom: 20px;
 }
 
+.option-container label {
+    color: white;
+}
+
 #calculate-button {
     font-family: "Open Sans";
     float: right;
-    margin-right: 25%;
+    width: 30%;
+    margin-right: 33%;
     background-color: transparent;
-    color: white;
+    color: #FFCBF2;
     font-size: 200%;
     border: none;
-    border: 4px solid white;
+    border: 4px solid #FFCBF2;
     border-radius: 10px;
 }
 
 #calculate-button:hover {
     color: black;
     cursor: pointer;
-    background-color: white;
+    background-color: #FFCBF2;
+}
+
+#result-container {
+    color: white;
+    float: right;
+    margin-top: 2%;
+}
+
+#sum {
+    background-color: transparent;
+    border: none;
+    color: white;
+    resize: none;
 }
