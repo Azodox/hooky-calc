@@ -9,16 +9,17 @@ body {
 }
 
 body input[type=number]{
-    border: 5px solid #D0D1FF;
+    border: 2px solid #F3C4FB;
 }
 
 body input[type=number]:hover{
-    border: 5px solid #FFF;
+    border: 4px solid #FFF;
     color: white;
 }
 
 .category-name {
     color: #C8E7FF;
+    text-decoration: underline;
 }
 
 .drinks {
@@ -36,4 +37,27 @@ body input[type=number]:hover{
 .amount {
     background: transparent;
     width: 50px;
+}
+
+.option {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#calculate-button {
+    font-family: "Open Sans";
+    float: right;
+    margin-right: 25%;
+    background-color: transparent;
+    color: white;
+    font-size: 200%;
+    border: none;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+#calculate-button:hover {
+    color: black;
+    cursor: pointer;
+    background-color: white;
 }
