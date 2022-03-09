@@ -19,7 +19,6 @@
 }
 
 body {
-    font-family: arial,sans-serif;
     background-image: url("https://azodox.github.io/uwu-calc/background.png");
     background-size: cover;
 }
@@ -79,6 +78,13 @@ body input[type=number]:hover{
 
 .option-container label {
     color: white;
+    font-family: arial;
+}
+
+.option-container {
+    position: relative;
+    margin-top: 17%;
+    width: 200px;
 }
 
 #calculate-button {
@@ -100,7 +106,8 @@ body input[type=number]:hover{
 
 #result-container {
     float: right;
-    margin-right: 38%;
+    width: 400px;
+    margin-top: 7%;
     color: white;
     text-align: center;
     align-items: center;
@@ -108,14 +115,19 @@ body input[type=number]:hover{
 }
 
 #sum {
-    background-color: rgb(54, 54, 54);
-    opacity: .5;
+    background-color: rgba(54, 54, 54, .5);
     border: none;
     color: white;
     resize: none;
     border: 2px solid #FFCBF2;
     border-radius: 10px;
     font-family: "Oswald";
+    font-size: 15px;
+}
+
+#recipe-container {
+    float: right;
+    margin: 14.31% 23% 0 1%;
 }
 
 #total {
