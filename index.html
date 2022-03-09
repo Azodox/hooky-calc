@@ -13,69 +13,110 @@
         <div id="iced-drink">
             <h2 class="category-name">Boissons glacées</h2>
             <div id="iced-coffee-container">
-                <p class="object-name">Café Glacé (cg)</p>
+                <p class="object-name noselect">Café Glacé (cg)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="iced-coffee-recipe-container">
+                <p id="iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café moulu, Crème</p>
             </div>
             <div id="vanilla-iced-coffee-container">
-                <p class="object-name">Café Glacé Vanille (cgv)</p>
+                <p class="object-name noselect">Café Glacé Vanille (cgv)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
+            <div id="vanilla-iced-coffee-recipe-container">
+                <p id="vanilla-iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café, Crème, Sirop de Vanille</p>
+            </div>
             <div id="caramel-iced-coffee-container">
-                <p class="object-name">Café Glacé Caramel (cgc)</p>
+                <p class="object-name noselect">Café Glacé Caramel (cgc)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="caramel-iced-coffee-recipe-container">
+                <p id="caramel-iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café, Crème, Sirop de Caramel</p>
             </div>
         </div>
         <div id="hot-drink">
             <h2 class="category-name">Boissons chaudes</h2>
             <div id="coffee-container">
-                <p class="object-name">Café simple (c)</p>
+                <p class="object-name noselect">Café simple (c)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="coffee-recipe-container">
+                <p id="coffee-recipe" class="recipe hidden">Goblet, café moulu</p>
             </div>
             <div id="decaffeinated-coffee-container">
-                <p class="object-name">Café décaféïné (cd)</p>
+                <p class="object-name noselect">Café décaféïné (cd)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="decaffeinated-coffee-recipe-container">
+                <p id="decaffeinated-coffee-recipe" class="recipe hidden">Goblet, café moulu déca</p>
             </div>
             <div id="cappuccino-coffee-container">
-                <p class="object-name">Cappuccino (ca)</p>
+                <p class="object-name noselect">Cappuccino (ca)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="cappuccino-coffee-recipe-container">
+                <p id="cappuccino-coffee-recipe" class="recipe hidden">Goblet, Café moulu, 2*Laits</p>
             </div>
             <div id="latte-coffee-container">
-                <p class="object-name">Café Latte (cl)</p>
+                <p class="object-name noselect">Café Latte (cl)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="latte-coffee-recipe-container">
+                <p id="latte-coffee-recipe" class="recipe hidden">Goblet, Café moulu, Lait</p>
             </div>
             <div id="americano-container">
-                <p class="object-name">Americano (a)</p>
+                <p class="object-name noselect">Americano (a)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="americano-recipe-container">
+                <p id="americano-recipe" class="recipe hidden">Goblet, Café Moulu, Bouteille d'eau</p>
             </div>
             <div id="moka-container">
-                <p class="object-name">Moka (m)</p>
+                <p class="object-name noselect">Moka (m)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
+            <div id="moka-recipe-container">
+                <p id="moka-recipe" class="recipe hidden">Goblet, Café moulu, Sirop au choco, Crème Fouettée</p>
+            </div>
             <div id="hot-chocolate-container">
-                <p class="object-name">Chocolat chaud (cc)</p>
+                <p class="object-name noselect">Chocolat chaud (cc)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="hot-chocolate-recipe-container">
+                <p id="hot-chocolate-recipe" class="recipe hidden">Goblet, Café moulu, 2* Laits, Sirop de choco</p>
             </div>
         </div>
         <div id="pastry-container">
             <h2 class="category-name">Viennoiseries</h2>
             <div id="chocolatine-container">
-                <p class="object-name">Chocolatine (ch)</p>
+                <p class="object-name noselect">Chocolatine (ch)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="chocolatine-recipe-container">
+                <p id="chocolatine-recipe" class="recipe hidden">Oeuf, Pâte à patisserie, Pépite de Chocolat</p>
             </div>
             <div id="croissant-container">
-                <p class="object-name">Croissant (cr)</p>
+                <p class="object-name noselect">Croissant (cr)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
+            <div id="croissant-recipe-container">
+                <p id="croissant-recipe" class="recipe hidden">2*Pâte à patisseries</p>
+            </div>
             <div id="muffins-container">
-                <p class="object-name">Muffins (mf)</p>
+                <p class="object-name noselect">Muffins (mf)</p>
                 <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+            </div>
+            <div id="muffins-recipe-container">
+                <p id="muffins-recipe" class="recipe hidden">Mélange à muffin, ingrédiant du goût</p>
             </div>
         </div>
     </div>
-    <div id="recipe-container">
-        <textarea name="recipe" id="recipe" cols="30" rows="7"></textarea>
+    <div id="tip-container">
+        <label id="label-tip" for="tip-amount">Pourboire</label><br>
+        <input type="number" id="tip-amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
     </div>
     <div id="result-container">
+        <input type="button" name="reset" value="Réinitialiser" id="reset-button">
         <input type="button" value="Calculer" id="calculate-button"><br><br>
         <span id="total">0</span>$<br>
         <hr id="line">
@@ -115,6 +156,7 @@
         var company = document.getElementById('company')
         var result = document.getElementById('total')
         var sum = document.getElementById('sum')
+        var tip = document.getElementById('tip-amount')
 
         var data = '{"drinks":[{"iced_coffee":{"normal":50,"delivery":60},"vanilla_iced_coffee":{"normal":65,"delivery":75},"caramel_iced_coffee":{"normal":65,"delivery":75},"coffee":{"normal":40,"delivery":50},"decaffeinated_coffee":{"normal":40,"delivery":50},"cappuccino_coffee":{"normal":50,"delivery":60},"latte_coffee":{"normal":45,"delivery":55},"americano":{"normal":45,"delivery":55},"moka":{"normal":50,"delivery":60},"hot_chocolate":{"normal":55,"delivery":65},"chocolatine":{"normal":45,"delivery":55},"croissant":{"normal":35,"delivery":45},"muffins":{"normal":40,"delivery":50}}]}'
         var prices = JSON.parse(data)
@@ -144,8 +186,12 @@
             if(partnership.checked || company.checked){
                 total *= 0.9
             }
+            if(tip.value != 0){
+                total += tip.valueAsNumber
+            }
+
             result.innerText = total
-            sum.innerText = summary
+            sum.innerText = summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
         })
     </script>
     <script type="text/javascript">
@@ -154,6 +200,51 @@
                 element.value = 0
             }
         }
+    </script>
+    <script type="text/javascript">
+        var objectNames = document.getElementsByClassName('object-name')
+        Array.from(objectNames).forEach(function(objectName) {
+            objectName.addEventListener('click', function(e) {
+                var recipe = document.getElementById(objectName.parentElement.id.replace("container", "recipe"))
+                if(recipe.classList.contains("show")){
+                    recipe.classList.replace("show", "hidden")
+                }else if(recipe.classList.contains("hidden")){
+                    recipe.classList.replace("hidden", "show")
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        var resetButton = document.getElementById('reset-button')
+        var drinksContainer = Array.from(document.getElementById('drinks').children)
+        var partnership = document.getElementById('partnership')
+        var company = document.getElementById('company')
+        var result = document.getElementById('total')
+        var sum = document.getElementById('sum')
+        var tip = document.getElementById('tip-amount')
+        var delivery = document.getElementById("delivery")
+
+        resetButton.addEventListener('click', function(e){
+            drinksContainer.forEach(function(drinks) {
+                if(drinks.children){
+                    Array.from(drinks.children).forEach(function(drink) {
+                        if(drink.children){
+                            Array.from(drink.children).forEach(function(d){
+                                if(d.tagName == 'INPUT'){
+                                    d.value = 0
+                                }
+                            })
+                        }
+                    })
+                }
+                partnership.checked = false
+                company.checked = false
+                sum.innerText = ""
+                tip.value = 0
+                result.innerText = 0
+                delivery.checked = false
+            })
+        })
     </script>
 </body>
 </html>
