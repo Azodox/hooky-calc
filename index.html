@@ -74,16 +74,16 @@
     </div>
     <div class="option-container">
         <input type="checkbox" name="livraison" id="delivery" class="option" onclick="onCheck(this);">
-        <label for="livraison">Livraison</label><br>
+        <label id="label-delivery" for="livraison">Livraison</label><br>
         <input type="checkbox" name="partenariat" id="partnership" class="option" value="Partenariat" onclick="onCheck(this);">
-        <label for="partenariat">Partenariat</label><br>
+        <label id="label-partnership" for="partenariat">Partenariat</label><br>
         <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
-        <label for="entreprise">Entreprise</label>
-    </div>
-    <input type="button" value="Calculer" id="calculate-button"><br><br>
+        <label id="label-company" for="entreprise">Entreprise</label>
     <div id="result-container">
-        <p id="result">Résultat : <span id="total">0</span></p>
-        <p>Résumé</p><textarea name="sum" id="sum" cols="50" rows="5" readonly="readonly"></textarea>
+        <input type="button" value="Calculer" id="calculate-button"><br><br>
+        <span id="total">0</span><br>
+        <hr id="line">
+        <p>Résumé</p><textarea name="sum" id="sum" cols="50" rows="7" readonly="readonly"></textarea>
     </div>
     
     <script type="text/javascript">
@@ -95,6 +95,12 @@
                 company.checked = false
             }else if(element.id == "company"){
                 partnership.checked = false;
+            }
+            
+            if(element.checked){
+                document.getElementById("label-" + element.id).style.color = "#F3C4FB";
+            }else{
+                document.getElementById("label-" + element.id).style.color = "white";
             }
         }
     </script>
