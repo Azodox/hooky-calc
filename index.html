@@ -14,63 +14,72 @@
             <h2 class="category-name">Boissons glacées</h2>
             <div id="iced-coffee-container">
                 <p class="object-name">Café Glacé (cg)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="vanilla-iced-coffee-container">
                 <p class="object-name">Café Glacé Vanille (cgv)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="caramel-iced-coffee-container">
                 <p class="object-name">Café Glacé Caramel (cgc)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
         </div>
         <div id="hot-drink">
             <h2 class="category-name">Boissons chaudes</h2>
             <div id="coffee-container">
                 <p class="object-name">Café simple (c)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="decaffeinated-coffee-container">
                 <p class="object-name">Café décaféïné (cd)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="cappuccino-coffee-container">
                 <p class="object-name">Cappuccino (ca)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="latte-coffee-container">
                 <p class="object-name">Café Latte (cl)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="americano-container">
                 <p class="object-name">Americano (a)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="moka-container">
                 <p class="object-name">Moka (m)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="hot-chocolate-container">
                 <p class="object-name">Chocolat chaud (cc)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
         </div>
         <div id="pastry-container">
             <h2 class="category-name">Viennoiseries</h2>
             <div id="chocolatine-container">
                 <p class="object-name">Chocolatine (ch)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="croissant-container">
                 <p class="object-name">Croissant (cr)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
             <div id="muffins-container">
                 <p class="object-name">Muffins (mf)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
             </div>
         </div>
+    </div>
+    <div id="recipe-container">
+        <textarea name="recipe" id="recipe" cols="30" rows="7"></textarea>
+    </div>
+    <div id="result-container">
+        <input type="button" value="Calculer" id="calculate-button"><br><br>
+        <span id="total">0</span>$<br>
+        <hr id="line">
+        <textarea name="sum" id="sum" cols="62" rows="5" readonly="readonly"></textarea>
     </div>
     <div class="option-container">
         <input type="checkbox" name="livraison" id="delivery" class="option" onclick="onCheck(this);">
@@ -79,11 +88,6 @@
         <label id="label-partnership" for="partenariat">Partenariat</label><br>
         <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
         <label id="label-company" for="entreprise">Entreprise</label>
-    <div id="result-container">
-        <input type="button" value="Calculer" id="calculate-button"><br><br>
-        <span id="total">0</span><br>
-        <hr id="line">
-        <p>Résumé</p><textarea name="sum" id="sum" cols="50" rows="7" readonly="readonly"></textarea>
     </div>
     
     <script type="text/javascript">
@@ -143,6 +147,13 @@
             result.innerText = total
             sum.innerText = summary
         })
+    </script>
+    <script type="text/javascript">
+        function onBlur(element){
+            if(element.value == "" || element.value < 0){
+                element.value = 0
+            }
+        }
     </script>
 </body>
 </html>
