@@ -25,7 +25,7 @@ body input[type=number]{
 }
 
 body input[type=number]:hover{
-    border: 4px solid #E5B3FE;
+    border: 2px solid #E5B3FE;
     color: #E5B3FE;
 }
 
@@ -45,7 +45,7 @@ body input[type=number]:hover{
     color: black;
     display: inline-block;
     padding: 4px;
-    background-color: #D0D1FF;
+    background-color: #6610B2;
 }
 
 .amount {
