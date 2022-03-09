@@ -52,6 +52,7 @@ body input[type=number]:hover{
     display: inline-block;
     padding: 4px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #hot-drink .object-name {
@@ -83,7 +84,7 @@ body input[type=number]:hover{
 
 .option-container {
     position: relative;
-    margin-top: 17%;
+    margin-top: 7%;
     width: 200px;
 }
 
@@ -104,10 +105,25 @@ body input[type=number]:hover{
     background-color: #FFCBF2;
 }
 
+#reset-button {
+    font-family: "Merryweather";
+    width: 30%;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#reset-button:hover {
+    cursor: pointer;
+}
+
 #result-container {
     float: right;
     width: 400px;
-    margin-top: 7%;
+    margin: -3% 37% 0 0;  
     color: white;
     text-align: center;
     align-items: center;
@@ -125,11 +141,6 @@ body input[type=number]:hover{
     font-size: 15px;
 }
 
-#recipe-container {
-    float: right;
-    margin: 14.31% 23% 0 1%;
-}
-
 #total {
     font-size: 3rem;
 }
@@ -139,4 +150,37 @@ body input[type=number]:hover{
     width: 70%;
     border: 4px solid white;
     border-radius: 10px;
+}
+
+#tip-container {
+    font-family: "Merryweather";
+    color: white;
+    margin: 8% 0 0 20%;
+}
+
+#tip-amount {
+    width: 100px;
+}
+
+.recipe {
+    margin-top: -3px;
+    max-width: 260px;
+    max-height: 50px;
+}
+
+.show {
+    background-color: #F3C4FB;
+}
+
+.hidden {
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
