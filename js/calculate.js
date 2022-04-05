@@ -47,5 +47,5 @@ calculate.addEventListener('click', function(e) {
     }
 
     result.innerText = total
-    sum.innerText = summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
+    sum.innerText = (delivery ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })
