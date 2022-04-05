@@ -55,15 +55,7 @@ body input[type=number]:hover{
     cursor: pointer;
 }
 
-#hot-drink .object-name {
-    background-color: #F3C4FB;
-}
-
-#iced-drink .object-name {
-    background-color: #F3C4FB;
-}
-
-#pastry-container .object-name {
+#menu-container .object-name, #pastry-container .object-name, #iced-drink .object-name, #hot-drink .object-name {
     background-color: #F3C4FB;
 }
 
