@@ -10,11 +10,14 @@
 var resetButton = document.getElementById('reset-button')
 var drinksContainer = Array.from(document.getElementById('drinks').children)
 var partnership = document.getElementById('partnership')
+var partnershipLabel = document.getElementById('label-partnership')
 var company = document.getElementById('company')
+var companyLabel = document.getElementById('label-company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
 var delivery = document.getElementById("delivery")
+var deliveryLabel = document.getElementById("label-delivery")
 
 /**
  * Then we add a click event listener.
@@ -40,5 +43,8 @@ resetButton.addEventListener('click', function(e){
         tip.value = 0
         result.innerText = 0
         delivery.checked = false
+        deliveryLabel.style.color = "white"
+        partnershipLabel.style.color = "white"
+        companyLabel.style.color = "white"
     })
 })
