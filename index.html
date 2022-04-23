@@ -14,21 +14,21 @@
             <h2 class="category-name">Boissons glacées</h2>
             <div id="iced-coffee-container">
                 <p class="object-name noselect">Café Glacé (cg)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="iced-coffee-recipe-container">
                 <p id="iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café moulu, Crème</p>
             </div>
             <div id="vanilla-iced-coffee-container">
                 <p class="object-name noselect">Café Glacé Vanille (cgv)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="vanilla-iced-coffee-recipe-container">
                 <p id="vanilla-iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café, Crème, Sirop de Vanille</p>
             </div>
             <div id="caramel-iced-coffee-container">
                 <p class="object-name noselect">Café Glacé Caramel (cgc)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="caramel-iced-coffee-recipe-container">
                 <p id="caramel-iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café, Crème, Sirop de Caramel</p>
@@ -38,49 +38,49 @@
             <h2 class="category-name">Boissons chaudes</h2>
             <div id="coffee-container">
                 <p class="object-name noselect">Café simple (c)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="coffee-recipe-container">
                 <p id="coffee-recipe" class="recipe hidden">Goblet, café moulu</p>
             </div>
             <div id="decaffeinated-coffee-container">
                 <p class="object-name noselect">Café décaféïné (cd)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="decaffeinated-coffee-recipe-container">
                 <p id="decaffeinated-coffee-recipe" class="recipe hidden">Goblet, café moulu déca</p>
             </div>
             <div id="cappuccino-coffee-container">
                 <p class="object-name noselect">Cappuccino (ca)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="cappuccino-coffee-recipe-container">
                 <p id="cappuccino-coffee-recipe" class="recipe hidden">Goblet, Café moulu, 2*Laits</p>
             </div>
             <div id="latte-coffee-container">
                 <p class="object-name noselect">Café Latte (cl)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="latte-coffee-recipe-container">
                 <p id="latte-coffee-recipe" class="recipe hidden">Goblet, Café moulu, Lait</p>
             </div>
             <div id="americano-container">
                 <p class="object-name noselect">Americano (a)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="americano-recipe-container">
                 <p id="americano-recipe" class="recipe hidden">Goblet, Café Moulu, Bouteille d'eau</p>
             </div>
             <div id="moka-container">
                 <p class="object-name noselect">Moka (m)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="moka-recipe-container">
                 <p id="moka-recipe" class="recipe hidden">Goblet, Café moulu, Sirop au choco, Crème Fouettée</p>
             </div>
             <div id="hot-chocolate-container">
                 <p class="object-name noselect">Chocolat chaud (cc)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="hot-chocolate-recipe-container">
                 <p id="hot-chocolate-recipe" class="recipe hidden">Goblet, Café moulu, 2* Laits, Sirop de choco</p>
@@ -90,28 +90,28 @@
             <h2 class="category-name">Nourriture</h2>
             <div id="chocolatine-container">
                 <p class="object-name noselect">Chocolatine (ch)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="chocolatine-recipe-container">
                 <p id="chocolatine-recipe" class="recipe hidden">Oeuf, Pâte à patisserie, Pépite de Chocolat</p>
             </div>
             <div id="croissant-container">
                 <p class="object-name noselect">Croissant (cr)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="croissant-recipe-container">
                 <p id="croissant-recipe" class="recipe hidden">Pâte à patisserie</p>
             </div>
             <div id="muffins-container">
                 <p class="object-name noselect">Muffins (mf)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="muffins-recipe-container">
                 <p id="muffins-recipe" class="recipe hidden">Mélange à muffin, ingrédiant du goût</p>
             </div>
             <div id="macncheese-container">
                 <p class="object-name noselect">Mac n'cheese (mac)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="macncheese-recipe-container">
                 <p id="macncheese-recipe" class="recipe hidden">On les achète au Noodle</p>
@@ -121,21 +121,21 @@
             <h2 class="category-name">Menus</h2>
             <div id="gfingsoif-container">
                 <p class="object-name noselect">G fin g soif</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="gfingsoif-recipe-container">
                 <p id="gfingsoif-recipe" class="recipe hidden">1 café simple + 1 mac'n'cheese</p>
             </div>
             <div id="chocochoco-container">
                 <p class="object-name noselect">Chocochoco</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="chocochoco-recipe-container">
                 <p id="chocochoco-recipe" class="recipe hidden">1 chocolat chaud + 1 chocolatine</p>
             </div>
             <div id="lebonmatin-container">
                 <p class="object-name noselect">Le bon matin</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
             </div>
             <div id="lebonmatin-recipe-container">
                 <p id="lebonmatin-recipe" class="recipe hidden">1 café + 1 croissant</p>
@@ -144,7 +144,7 @@
     </div>
     <div id="tip-container">
         <label id="label-tip" for="tip-amount">Pourboire</label><br>
-        <input type="number" id="tip-amount" step="1" value="0" class="amount" min="0" onFocus="this.select()" onBlur="onBlur(this)">
+        <input type="number" id="tip-amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
     </div>
     <div id="result-container">
         <input type="button" name="reset" value="Réinitialiser" id="reset-button">
@@ -161,7 +161,8 @@
         <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
         <label id="label-company" for="entreprise">Entreprise</label>
     </div>
-    
+
+    <script src="https://azodox.github.io/uwu-calc/js/auto-remove.js"></script>
     <script src="https://azodox.github.io/uwu-calc/js/check.js"></script>
     <script src="https://azodox.github.io/uwu-calc/js/calculate.js"></script>
     <script src="https://azodox.github.io/uwu-calc/js/blur.js"></script>
