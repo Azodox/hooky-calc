@@ -18,6 +18,8 @@ var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
 var delivery = document.getElementById("delivery")
 var deliveryLabel = document.getElementById("label-delivery")
+var publicService = document.getElementById("public-service")
+var publicServiceLabel = document.getElementById("label-public-service")
 
 /**
  * Then we add a click event listener.
@@ -32,6 +34,7 @@ resetButton.addEventListener('click', function(e){
                     Array.from(drink.children).forEach(function(d){
                         if(d.tagName == 'INPUT'){
                             d.value = 0
+                            d.disabled = false
                         }
                     })
                 }
@@ -46,5 +49,9 @@ resetButton.addEventListener('click', function(e){
         deliveryLabel.style.color = "white"
         partnershipLabel.style.color = "white"
         companyLabel.style.color = "white"
+        delivery.disabled = false
+        company.disabled = false
+        publicService.checked = false
+        publicServiceLabel.style.color = "white"
     })
 })

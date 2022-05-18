@@ -13,6 +13,7 @@ var company = document.getElementById('company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
+var publicService = document.getElementById("public-service")
 
 var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80},"vanilla_iced_coffee":{"normal":85,"delivery":95},"caramel_iced_coffee":{"normal":85,"delivery":95},"coffee":{"normal":60,"delivery":70},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":75,"delivery":85},"chocolatine":{"normal":65,"delivery":75},"croissant":{"normal":55,"delivery":65},"muffins":{"normal":60,"delivery":70}, "gfingsoif":{"normal":160,"delivery":180},"chocochoco":{"normal":140,"delivery":160},"lebonmatin":{"normal":115,"delivery":135},"macncheese":{"normal":100,"delivery":110},"boosterpack":{"normal":60,"delivery":70},"boosterbox":{"normal":240,"delivery":280},"chips":{"normal":20,"delivery":30},"icetea":{"normal":20,"delivery":30}}]}'
 var prices = JSON.parse(data)
@@ -47,5 +48,5 @@ calculate.addEventListener('click', function(e) {
     }
 
     result.innerText = parseInt(total)
-    sum.innerText = (delivery ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
+    sum.innerText = (publicService.checked ? "[Service Public] ": "") + (delivery.checked ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })
