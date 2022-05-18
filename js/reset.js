@@ -51,6 +51,7 @@ resetButton.addEventListener('click', function(e){
         companyLabel.style.color = "white"
         delivery.disabled = false
         company.disabled = false
+        partnership.disabled = false
         publicService.checked = false
         publicServiceLabel.style.color = "white"
     })
