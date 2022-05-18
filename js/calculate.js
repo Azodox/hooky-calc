@@ -32,7 +32,13 @@ calculate.addEventListener('click', function(e) {
                     Array.from(drink.children).forEach(function(d){
                         if(d.tagName == 'INPUT'){
                             var price = prices['drinks'][0][d.parentElement.id.replace("-container", "").replaceAll("-", "_")]
-                            total += d.value * parseInt(price[delivery ? 'delivery' : publicService.checked ? 'publicService' : 'normal'])
+                            if(delivery){
+                                total += d.value * price['delivery']
+                            } else if(publicService){
+                                total += d.value * price['publicService']
+                            } else {
+                                total += d.value * price['normal']
+                            }
                             if(d.value != 0) summary += d.value + simplified[d.parentElement.id.replace("-container", "").replaceAll("-", "_")] + " "
                         }
                     })
