@@ -19,6 +19,7 @@
 }
 
 body {
+    overflow: hidden;
     background-image: url("https://azodox.github.io/uwu-calc/background.png");
     background-size: cover;
 }
