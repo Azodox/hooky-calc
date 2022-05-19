@@ -35,7 +35,7 @@ function onCheck(element){
                         if(drink.children){
                             Array.from(drink.children).forEach(function(d){
                                 if(d.tagName == 'INPUT'){
-                                    if(d.parentElement.id != "coffee-container" && d.parentElement.id != "croissant-container"){
+                                    if(d.parentElement.id != "coffee-container" && d.parentElement.id != "croissant-container" && d.parentElement.id != "iced-coffee-container" && d.parentElement.id != "chocolatine-container"){
                                         d.disabled = true
                                     }    
                                 }
