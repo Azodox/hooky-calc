@@ -15,12 +15,15 @@ function onCheck(element){
         if(partnership.checked){
             company.disabled = true
             delivery.disabled = true
+            publicService.disabled = true
         }else{
             company.disabled = false
             delivery.disabled = false
+            publicService.disabled = false
         }
     }else if(element.id == "company"){
-        partnership.checked = false;
+        partnership.checked = false
+        publicService.checked = false
     }else if(element.id == "public-service"){
         if(publicService.checked){
             company.disabled = true
