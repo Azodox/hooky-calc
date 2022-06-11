@@ -54,5 +54,5 @@ calculate.addEventListener('click', function(e) {
     }
 
     result.innerText = parseInt(total)
-    sum.innerText = (publicService.checked ? "[Service Public] ": "") + (delivery.checked ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
+    sum.innerText = (publicService.checked ? "[Service Public] ": "") + (delivery ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })
