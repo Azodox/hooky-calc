@@ -9,6 +9,7 @@
 var calculate = document.getElementById('calculate-button')
 var drinksContainer = Array.from(document.getElementById('drinks').children)
 var partnership = document.getElementById('partnership')
+var tenten = document.getElementById('10-10')
 var company = document.getElementById('company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
@@ -53,6 +54,12 @@ calculate.addEventListener('click', function(e) {
         total += tip.valueAsNumber
     }
 
-    result.innerText = parseInt(total)
-    sum.innerText = (publicService.checked ? "[Service Public] ": "") + (delivery ? "[Livraison] " : "") + (partnership.checked || company.checked ? "[Réduction 10%] ": "") + summary + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
+    result.innerText = tenten.checked ? 900 : parseInt(total)
+    sum.innerText = 
+    (publicService.checked ? "[Service Public] ": "") 
+    + (delivery ? "[Livraison] " : "") 
+    + (partnership.checked || company.checked ? "[Réduction 10%] ": "") 
+    + (tenten.checked ? "[10-10] " : "")
+    + summary 
+    + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })
