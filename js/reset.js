@@ -20,6 +20,8 @@ var delivery = document.getElementById("delivery")
 var deliveryLabel = document.getElementById("label-delivery")
 var publicService = document.getElementById("public-service")
 var publicServiceLabel = document.getElementById("label-public-service")
+var tenten = document.getElementById("10-10")
+var tentenLabel = document.getElementById("label-10-10")
 
 /**
  * Then we add a click event listener.
@@ -54,5 +56,9 @@ resetButton.addEventListener('click', function(e){
         partnership.disabled = false
         publicService.checked = false
         publicServiceLabel.style.color = "white"
+        publicService.disabled = false
+        tenten.checked = false
+        tentenLabel.style.color = "white"
+        tenten.disabled = false
     })
 })
