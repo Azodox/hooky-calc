@@ -12,6 +12,10 @@ var tenten = document.getElementById("10-10")
 var drinksContainer = Array.from(document.getElementById('drinks').children)
 var menuContainer = Array.from(document.getElementById('menu-container').children)
 
+var hazelnutCoffee = document.getElementById("hazelnut-iced-coffee-count")
+var mochis = document.getElementById("mochis-count")
+var ramen = document.getElementById("ramen-count")
+
 function onCheck(element){
     switch(element.id){
         case "partnership":
@@ -89,6 +93,9 @@ function onCheck(element){
                     partnership.disabled = element.checked
                 })
             })
+            hazelnutCoffee.disabled = element.checked
+            mochis.disabled = element.checked
+            ramen.disabled = element.checked
             break;
         
         default: break;
