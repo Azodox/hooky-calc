@@ -8,18 +8,16 @@
 
 var calculate = document.getElementById('calculate-button')
 var drinksContainer = Array.from(document.getElementById('drinks').children)
-var partnership = document.getElementById('partnership')
-var tenten = document.getElementById('10-10')
 var company = document.getElementById('company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
 var publicService = document.getElementById("public-service")
 
-var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80,"publicService":30},"vanilla_iced_coffee":{"normal":85,"delivery":95},"caramel_iced_coffee":{"normal":85,"delivery":95},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":75,"delivery":85},"chocolatine":{"normal":65,"delivery":75,"publicService":25},"croissant":{"normal":55,"delivery":65,"publicService":15},"muffins":{"normal":60,"delivery":70}, "gfingsoif":{"normal":160,"delivery":180},"chocochoco":{"normal":140,"delivery":160},"lebonmatin":{"normal":115,"delivery":135},"macncheese":{"normal":100,"delivery":110},"boosterpack":{"normal":60,"delivery":70},"boosterbox":{"normal":240,"delivery":280},"chips":{"normal":20,"delivery":30},"icetea":{"normal":20,"delivery":30},"hazelnut_iced_coffee":{"normal":85,"delivery":95},"mochis":{"normal":70,"delivery":80},"ramen":{"normal":85,"delivery":95}}]}'
+var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80,"publicService":30},"vanilla_iced_coffee":{"normal":85,"delivery":95},"caramel_iced_coffee":{"normal":85,"delivery":95},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":75,"delivery":85},"chocolatine":{"normal":65,"delivery":75,"publicService":25},"croissant":{"normal":55,"delivery":65,"publicService":15},"muffins":{"normal":60,"delivery":70}, "gfingsoif":{"normal":160,"delivery":180},"chocochoco":{"normal":140,"delivery":160},"lebonmatin":{"normal":115,"delivery":135},"macncheese":{"normal":100,"delivery":110},"hazelnut_iced_coffee":{"normal":85,"delivery":95},"mochis":{"normal":70,"delivery":80},"ramen":{"normal":85,"delivery":95}}]}'
 var prices = JSON.parse(data)
 
-var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","gfingsoif":" G fin G soif","chocochoco":" Chocochoco","lebonmatin":" Le bon matin","macncheese":"mac","boosterpack":"bp","boosterbox":"bb","chips":"cs","icetea":"tg","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra"}'
+var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","gfingsoif":" G fin G soif","chocochoco":" Chocochoco","lebonmatin":" Le bon matin","macncheese":"mac","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra"}'
 var simplified = JSON.parse(simplifiedData)
 
 calculate.addEventListener('click', function(e) {
@@ -52,19 +50,18 @@ calculate.addEventListener('click', function(e) {
             })
         }
     })
-    if(partnership.checked || company.checked){
+    if(company.checked){
         total *= 0.9
     }
     if(tip.value != 0){
         total += tip.valueAsNumber
     }
 
-    result.innerText = tenten.checked ? 900 : parseInt(total)
+    result.innerText = parseInt(total)
     sum.innerText = 
     (publicService.checked ? "[Service Public] ": "") 
     + (delivery ? "[Livraison] " : "") 
-    + (partnership.checked || company.checked ? "[Réduction 10%] ": "") 
-    + (tenten.checked ? "[10-10] " : "")
-    + summary 
+    + (company.checked ? "[Réduction 10%] ": "")
+    + summary
     + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })

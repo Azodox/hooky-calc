@@ -9,8 +9,6 @@
  */
 var resetButton = document.getElementById('reset-button')
 var drinksContainer = Array.from(document.getElementById('drinks').children)
-var partnership = document.getElementById('partnership')
-var partnershipLabel = document.getElementById('label-partnership')
 var company = document.getElementById('company')
 var companyLabel = document.getElementById('label-company')
 var result = document.getElementById('total')
@@ -20,8 +18,6 @@ var delivery = document.getElementById("delivery")
 var deliveryLabel = document.getElementById("label-delivery")
 var publicService = document.getElementById("public-service")
 var publicServiceLabel = document.getElementById("label-public-service")
-var tenten = document.getElementById("10-10")
-var tentenLabel = document.getElementById("label-10-10")
 
 /**
  * Then we add a click event listener.
@@ -42,23 +38,17 @@ resetButton.addEventListener('click', function(e){
                 }
             })
         }
-        partnership.checked = false
         company.checked = false
         sum.innerText = ""
         tip.value = 0
         result.innerText = 0
         delivery.checked = false
         deliveryLabel.style.color = "white"
-        partnershipLabel.style.color = "white"
         companyLabel.style.color = "white"
         delivery.disabled = false
         company.disabled = false
-        partnership.disabled = false
         publicService.checked = false
         publicServiceLabel.style.color = "white"
         publicService.disabled = false
-        tenten.checked = false
-        tentenLabel.style.color = "white"
-        tenten.disabled = false
     })
 })

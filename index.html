@@ -40,13 +40,6 @@
             <div id="hazelnut-iced-coffee-recipe-container">
                 <p id="hazelnut-iced-coffee-recipe" class="recipe hidden">Goblet, Glace, Café, Crème, Sirop de Noisette</p>
             </div>
-            <div id="icetea-container">
-                <p class="object-name noselect">Thé Glacé (tg)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
-            </div>
-            <div id="icetea-recipe-container">
-                <p id="icetea-recipe" class="recipe hidden">Acheté au LTD</p>
-            </div>
         </div>
         <div id="hot-drink">
             <h2 class="category-name">Boissons chaudes</h2>
@@ -123,13 +116,6 @@
             <div id="muffins-recipe-container">
                 <p id="muffins-recipe" class="recipe hidden">Mélange à muffin, ingrédiant du goût</p>
             </div>
-            <div id="chips-container">
-                <p class="object-name noselect">Chips (cs)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
-            </div>
-            <div id="chips-recipe-container">
-                <p id="chips-recipe" class="recipe hidden">Acheté au LTD</p>
-            </div>
             <div id="mochis-container">
                 <p class="object-name noselect">Mochis (mo)</p>
                 <input id="mochis-count" type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
@@ -143,23 +129,6 @@
             </div>
             <div id="ramen-recipe-container">
                 <p id="ramen-recipe" class="recipe hidden">nouille ramen, bouillon miso, carotte, oeuf</p>
-            </div>
-        </div>
-        <div id="menu-container">
-            <h2 class="category-name">Pokémon</h2>
-            <div id="boosterpack-container">
-                <p class="object-name noselect">Boosterpack (bp)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
-            </div>
-            <div id="boosterpack-recipe-container">
-                <p id="boosterpack-recipe" class="recipe hidden">Acheté au LTD</p>
-            </div>
-            <div id="boosterbox-container">
-                <p class="object-name noselect">Boosterbox (bb)</p>
-                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
-            </div>
-            <div id="boosterbox-recipe-container">
-                <p id="boosterbox-recipe" class="recipe hidden">Acheté au LTD</p>
             </div>
         </div>
     </div>
@@ -179,12 +148,8 @@
         <label id="label-delivery" for="livraison">Livraison</label><br>
         <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
         <label id="label-company" for="entreprise">Entreprise</label><br>
-        <input type="checkbox" name="partenariat" id="partnership" class="option" value="Partenariat" onclick="onCheck(this);">
-        <label id="label-partnership" for="partenariat">Associé</label><br>
         <input type="checkbox" name="public-service" id="public-service" class="option" value="Service Public" onclick="onCheck(this);">
         <label id="label-public-service" for="public-service">Service public</label><br>
-        <input type="checkbox" name="10-10" id="10-10" class="option" value="10-10" onclick="onCheck(this);">
-        <label id="label-10-10" for="10-10">10-10</label>
     </div>
 
     <script src="https://azodox.github.io/uwu-calc/js/auto-remove.js"></script>

@@ -6,11 +6,8 @@
 
 var delivery = document.getElementById("delivery")
 var company = document.getElementById("company")
-var partnership = document.getElementById("partnership")
 var publicService = document.getElementById("public-service")
-var tenten = document.getElementById("10-10")
 var drinksContainer = Array.from(document.getElementById('drinks').children)
-var menuContainer = Array.from(document.getElementById('menu-container').children)
 
 var hazelnutCoffee = document.getElementById("hazelnut-iced-coffee-count")
 var mochis = document.getElementById("mochis-count")
@@ -18,31 +15,16 @@ var ramen = document.getElementById("ramen-count")
 
 function onCheck(element){
     switch(element.id){
-        case "partnership":
-            if(partnership.checked){
-                company.disabled = true
-                delivery.disabled = true
-                publicService.disabled = true
-                tenten.disabled = true
-            }else{
-                company.disabled = false
-                delivery.disabled = false
-                publicService.disabled = false
-                tenten.disabled = false
-            }
-            break;
-
         case "company":
-            partnership.checked = false
             publicService.checked = false
             break;
         
         case "public-service":
             if(publicService.checked){
+                company.checked = false
+                delivery.checked = false
                 company.disabled = true
                 delivery.disabled = true
-                partnership.disabled = true
-                tenten.disabled = true
 
                 drinksContainer.forEach(function(drinks) {
                     if(drinks.children){
@@ -62,8 +44,6 @@ function onCheck(element){
             }else {
                 company.disabled = false
                 delivery.disabled = false
-                partnership.disabled = false
-                tenten.disabled = false
 
                 drinksContainer.forEach(function(drinks) {
                     if(drinks.children){
@@ -79,23 +59,6 @@ function onCheck(element){
                     }
                 })
             }
-            break;
-        
-        case "10-10":
-            menuContainer.forEach(function(menus) {
-                Array.from(menus.children).forEach(function(menu) {
-                    if(menu.tagName == 'INPUT'){
-                        menu.disabled = element.checked
-                    }
-                    company.disabled = element.checked
-                    delivery.disabled = element.checked
-                    publicService.disabled = element.checked
-                    partnership.disabled = element.checked
-                })
-            })
-            hazelnutCoffee.disabled = element.checked
-            mochis.disabled = element.checked
-            ramen.disabled = element.checked
             break;
         
         default: break;
