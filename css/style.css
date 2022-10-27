@@ -18,13 +18,14 @@
     background-color: black;
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (max-width: 770px) {
     body {
-        overflow: hidden;
+        overflow: auto;
     }
 }
 
 body {
+    overflow: hidden;
     background-image: url("https://azodox.github.io/uwu-calc/background.png");
     background-size: cover;
 }
