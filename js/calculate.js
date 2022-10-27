@@ -12,12 +12,11 @@ var company = document.getElementById('company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
-var publicService = document.getElementById("public-service")
 
-var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80,"publicService":30},"vanilla_iced_coffee":{"normal":85,"delivery":95},"caramel_iced_coffee":{"normal":85,"delivery":95},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":75,"delivery":85},"chocolatine":{"normal":65,"delivery":75,"publicService":25},"croissant":{"normal":55,"delivery":65,"publicService":15},"muffins":{"normal":60,"delivery":70}, "gfingsoif":{"normal":160,"delivery":180},"chocochoco":{"normal":140,"delivery":160},"lebonmatin":{"normal":115,"delivery":135},"macncheese":{"normal":100,"delivery":110},"hazelnut_iced_coffee":{"normal":85,"delivery":95},"mochis":{"normal":70,"delivery":80},"ramen":{"normal":85,"delivery":95}}]}'
+var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80},"vanilla_iced_coffee":{"normal":90,"delivery":100},"caramel_iced_coffee":{"normal":90,"delivery":100},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":70,"delivery":80},"chocolatine":{"normal":60,"delivery":65},"croissant":{"normal":60,"delivery":65},"muffins":{"normal":60,"delivery":65},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100}}]}'
 var prices = JSON.parse(data)
 
-var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","gfingsoif":" G fin G soif","chocochoco":" Chocochoco","lebonmatin":" Le bon matin","macncheese":"mac","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra"}'
+var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra"}'
 var simplified = JSON.parse(simplifiedData)
 
 calculate.addEventListener('click', function(e) {
@@ -38,8 +37,6 @@ calculate.addEventListener('click', function(e) {
 
                             if(delivery){
                                 total += d.value * price['delivery']
-                            } else if(publicService.checked && price['publicService']){
-                                total += d.value * price['publicService']
                             } else {
                                 total += d.value * price['normal']
                             }
@@ -59,8 +56,7 @@ calculate.addEventListener('click', function(e) {
 
     result.innerText = parseInt(total)
     sum.innerText = 
-    (publicService.checked ? "[Service Public] ": "") 
-    + (delivery ? "[Livraison] " : "") 
+    (delivery ? "[Livraison] " : "")
     + (company.checked ? "[Réduction 10%] ": "")
     + summary
     + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
