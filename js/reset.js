@@ -1,11 +1,11 @@
-/**
+/*
  * This file is the system that handle what happened when you
  * click on the reset button.
  * As it says, the reset button will reset each field, each modifiable value on the site.
  */
 
-/**
- * First of all, we retrive every modifiable field and put them into a variable.
+/*
+ * First of all, we retrieve every modifiable field and put them into a variable.
  */
 const resetButton = document.getElementById('reset-button')
 const drinksContainer = Array.from(document.getElementById('drinks').children)
@@ -19,7 +19,7 @@ const deliveryLabel = document.getElementById("label-delivery")
 const tenten = document.getElementById("10-10")
 const tentenLabel = document.getElementById("label-10-10")
 
-/**
+/*
  * Then we add a click event listener.
  * And if the user clicks on the button each field (variables above)
  * will be reset by default.
