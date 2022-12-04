@@ -137,6 +137,13 @@
         <input type="number" id="tip-amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
     </div>
     <div id="result-container">
+        <div id="10-10-container">
+            <p class="object-name noselect">10-10</p>
+            <input type="number" name="amount" id="10-10" class="amount option" step="1" value="0" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+        </div>
+        <div class="10-10-recipe-container">
+            <p id="10-10-recipe" class="recipe hidden" style="color: black;">10 Café + 10 Ramen</p>
+        </div>
         <input type="button" name="reset" value="Réinitialiser" id="reset-button">
         <input type="button" value="Calculer" id="calculate-button"><br><br>
         <span id="total">0</span>$<br>
@@ -148,8 +155,6 @@
         <label id="label-delivery" for="delivery">Livraison</label><br>
         <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
         <label id="label-company" for="company">Entreprise</label><br>
-        <input type="checkbox" name="10-10" id="10-10" class="option" value="10-10" onclick="onCheck(this);">
-        <label id="label-10-10" for="10-10">10-10</label>
     </div>
 
     <script src="https://azodox.github.io/uwu-calc/js/auto-remove.js"></script>

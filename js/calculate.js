@@ -14,10 +14,10 @@ var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
 
-var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80},"vanilla_iced_coffee":{"normal":90,"delivery":100},"caramel_iced_coffee":{"normal":90,"delivery":100},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":70,"delivery":80},"chocolatine":{"normal":60,"delivery":65},"croissant":{"normal":60,"delivery":65},"muffins":{"normal":60,"delivery":65},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100}}]}'
+var data = '{"drinks":[{"iced_coffee":{"normal":70,"delivery":80},"vanilla_iced_coffee":{"normal":90,"delivery":100},"caramel_iced_coffee":{"normal":90,"delivery":100},"coffee":{"normal":60,"delivery":70,"publicService":20},"decaffeinated_coffee":{"normal":60,"delivery":70},"cappuccino_coffee":{"normal":70,"delivery":80},"latte_coffee":{"normal":65,"delivery":75},"americano":{"normal":65,"delivery":75},"moka":{"normal":70,"delivery":80},"hot_chocolate":{"normal":70,"delivery":80},"chocolatine":{"normal":60,"delivery":65},"croissant":{"normal":60,"delivery":65},"muffins":{"normal":60,"delivery":65},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100},"10-10":{"normal":1000}}]}'
 var prices = JSON.parse(data)
 
-var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra"}'
+var simplifiedData = '{"coffee":"c","decaffeinated_coffee":"cd","cappuccino_coffee":"ca","latte_coffee":"cl","americano":"a","moka":"m","hot_chocolate":"cc","iced_coffee":"cg","vanilla_iced_coffee":"cgv","caramel_iced_coffee":"cgc","chocolatine":"ch","croissant":"cr","muffins":"mf","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra","10-10":"tenten"}'
 var simplified = JSON.parse(simplifiedData)
 
 calculate.addEventListener('click', function(e) {
@@ -48,6 +48,11 @@ calculate.addEventListener('click', function(e) {
             })
         }
     })
+    if(!tenten.disabled){
+        total += tenten.value * prices['drinks'][0]['10-10']['normal']
+        if(tenten.value != 0) summary += tenten.value + simplified['10-10'] + " "
+    }
+
     if(company.checked){
         total *= 0.9
     }
@@ -55,11 +60,10 @@ calculate.addEventListener('click', function(e) {
         total += tip.valueAsNumber
     }
 
-    result.innerText = tenten.checked ? 1000 : parseInt(total)
+    result.innerText = parseInt(total)
     sum.innerText = 
     (delivery ? "[Livraison] " : "")
     + (company.checked ? "[Réduction 10%] ": "")
-        + (tenten.checked ? "[10-10] " : "")
     + summary
     + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
 })

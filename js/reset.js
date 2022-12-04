@@ -17,7 +17,6 @@ var tip = document.getElementById('tip-amount')
 var delivery = document.getElementById("delivery")
 var deliveryLabel = document.getElementById("label-delivery")
 var tenten = document.getElementById("10-10")
-var tentenLabel = document.getElementById("label-10-10")
 
 /*
  * Then we add a click event listener.
@@ -38,6 +37,8 @@ resetButton.addEventListener('click', function(e){
                 }
             })
         }
+        tenten.value = 0
+        tenten.disabled = false
         company.checked = false
         sum.innerText = ""
         tip.value = 0
@@ -47,8 +48,6 @@ resetButton.addEventListener('click', function(e){
         companyLabel.style.color = "white"
         delivery.disabled = false
         company.disabled = false
-        tenten.checked = false
-        tentenLabel.style.color = "white"
         tenten.disabled = false
     })
 })
