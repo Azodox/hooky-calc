@@ -1,23 +1,23 @@
-/*
+/**
  * This file is the system that handle what happened when you
  * click on the reset button.
  * As it says, the reset button will reset each field, each modifiable value on the site.
  */
 
-/*
+/**
  * First of all, we retrieve every modifiable field and put them into a variable.
  */
-const resetButton = document.getElementById('reset-button')
-const drinksContainer = Array.from(document.getElementById('drinks').children)
-const company = document.getElementById('company')
-const companyLabel = document.getElementById('label-company')
-const result = document.getElementById('total')
-const sum = document.getElementById('sum')
-const tip = document.getElementById('tip-amount')
-const delivery = document.getElementById("delivery")
-const deliveryLabel = document.getElementById("label-delivery")
-const tenten = document.getElementById("10-10")
-const tentenLabel = document.getElementById("label-10-10")
+var resetButton = document.getElementById('reset-button')
+var drinksContainer = Array.from(document.getElementById('drinks').children)
+var company = document.getElementById('company')
+var companyLabel = document.getElementById('label-company')
+var result = document.getElementById('total')
+var sum = document.getElementById('sum')
+var tip = document.getElementById('tip-amount')
+var delivery = document.getElementById("delivery")
+var deliveryLabel = document.getElementById("label-delivery")
+var tenten = document.getElementById("10-10")
+var tentenLabel = document.getElementById("label-10-10")
 
 /*
  * Then we add a click event listener.

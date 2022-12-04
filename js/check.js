@@ -4,8 +4,8 @@
  * And if you uncheck it, it will comeback to white.
  */
 
-const delivery = document.getElementById("delivery")
-const company = document.getElementById("company")
+var delivery = document.getElementById("delivery")
+var company = document.getElementById("company")
 
 function onCheck(element){
     if(element.id === "10-10"){
