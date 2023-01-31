@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("https://azodox.github.io/uwu-calc/fonts/oswald.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Merryweather";
+    src: url("https://azodox.github.io/uwu-calc/fonts/merriweather.woff2") format("woff2");
+}
+
+::-moz-selection {
+    color: white;
+    background-color: black;
+}
+
+::selection {
+    color: white;
+    background-color: black;
+}
+
+@media screen and (max-width: 770px) {
+    body {
+        overflow: auto;
+    }
+}
+
+body {
+    overflow: hidden;
+    background-image: url("../background.png");
+    background-size: cover;
+}
+
+body input[type=number]{
+    font-size: 15px;
+    color: white;
+    border: 2px solid #ffffff;
+}
+
+body input[type=number]:hover{
+    border: 2px solid #ffffff;
+    color: #000000;
+}
+
+.category-name {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#drinks {
+    font-family: "Merryweather";
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.object-name {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.amount {
+    background: transparent;
+    width: 50px;
+}
+
+.option {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.option-container label {
+    color: white;
+    font-family: arial, sans-serif;
+}
+
+.option-container {
+    position: absolute;
+    margin-top: auto;
+    width: 200px;
+}
+
+#label-10-10 {
+    font-family: arial, sans-serif;
+}
+
+#calculate-button {
+    font-family: "Merryweather", sans-serif;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 200%;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+}
+
+#calculate-button:hover {
+    color: black;
+    cursor: pointer;
+    background-color: #00000049;
+}
+
+#reset-button {
+    font-family: "Merryweather", sans-serif;
+    width: 30%;
+    background-color: white;
+    color: black;
+    font-size: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#reset-button:hover {
+    cursor: pointer;
+}
+
+#result-container {
+    float: right;
+    width: 400px;
+    margin: 2% 37% 0 0;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#sum {
+    background-color: rgba(54, 54, 54, .5);
+    color: white;
+    resize: none;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+}
+
+#total {
+    font-size: 3rem;
+}
+
+#line {
+    margin-top: -5px;
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+#tip-container {
+    position: absolute;
+    font-family: "Merryweather", sans-serif;
+    color: white;
+    margin: 8% 0 0 20%;
+}
+
+#tip-amount {
+    width: 100px;
+}
+
+.recipe {
+    font-family: "Merryweather", sans-serif;
+    margin-top: -3px;
+    max-width: 260px;
+    max-height: 50px;
+}
+
+.show {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}

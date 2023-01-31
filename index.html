@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>- UwU's Calc -</title>
+</head>
+<body>
+    <div id="drinks">
+        <div id="iced-drink">
+            <h2 class="category-name">Sushis</h2>
+            <div id="sushis-crabe-container">
+                <p class="object-name noselect">Suhsis au Crabe</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="sushis-crabe-container">
+                <p id="sushis-crabe-recipe" class="recipe hidden">1 Viande de poisson cuite, 2 Feuilles d'algue, 1 Riz cuit, 1 Concombre coupé</p>
+            </div>
+            <div id="sushis-saumon-container">
+                <p class="object-name noselect">Sushis au Saumon Fumé </p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="sushis-saumon-recipe-container">
+                <p id="sushis-saumon-recipe-recipe" class="recipe hidden">1 Viande de poisson cuite, 2 Feuilles d'algue, 1 Riz cuit, 1 Concombre coupé</p>
+            </div>
+            <div id="sushis-crevette-container">
+                <p class="object-name noselect">Sushi Crevette </p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="sushis-crevette-container">
+                <p id="sushis-crevette-recipe" class="recipe hidden">1 Viande de poisson cuite, 2 Feuilles d'algue, 1 Riz cuit, 1 Concombre coupé</p>
+            </div>
+        </div>
+        <div id="hot-drink">
+            <h2 class="category-name">Plats</h2>
+            <div id="cesar-container">
+                <p class="object-name noselect">Salade César</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="cesar-recipe-container">
+                <p id="cesar-recipe" class="recipe hidden">2 Salades coupés, Croûtons, Parmesan, Vinaigrette</p>
+            </div>
+            <div id="jardin-container">
+                <p class="object-name noselect">Salade du Jardin </p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="jardin-recipe-container">
+                <p id="jardin-coffee-recipe" class="recipe hidden">2 Salade coupés, 2 Concombres coupés, Vinaigrette, 2 Carottes coupés</p>
+            </div>
+            <div id="turbot-container">
+                <p class="object-name noselect">Filet de Turbot</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="turbot-recipe-container">
+                <p id="turbot-recipe" class="recipe hidden">2 Patates coupés, Viande de poisson cuite, Farine, Beurre</p>
+            </div>
+            <div id="saumon-container">
+                <p class="object-name noselect">Filet de Saumon</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="saumon-container">
+                <p id="saumon-recipe" class="recipe hidden">Sirop d'érable, Viande de poisson cuite, Epices, Riz cuit</p>
+            </div>
+            <div id="morue-container">
+                <p class="object-name noselect">Filet de Morue</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="morue-recipe-container">
+                <p id="morue-recipe" class="recipe hidden">Patate Coupée, Viande de poisson cuite, Huile d'olive</p>
+            </div>
+        </div>
+        <div id="pastry-container">
+            <h2 class="category-name">Alcool</h2>
+            <div id="chocolatine-container">
+                <p class="object-name noselect">En travaux</p>
+                <input type="number" name="amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+            </div>
+            <div id="chocolatine-recipe-container">
+                <p id="chocolatine-recipe" class="recipe hidden">en fait on a pas de boissons pour le moment. Faudra que je trouve un vendeur de vin. -Le patron/dev
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tip-container">
+        <label id="label-tip" for="tip-amount">Pourboire</label><br>
+        <input type="number" id="tip-amount" step="1" value="0" class="amount" min="0" onFocus="removeZero(this)" onBlur="onBlur(this)">
+    </div>
+    <div id="result-container">
+        <div class="10-10-recipe-container">
+            <p id="10-10-recipe" class="recipe hidden" style="color: black;">10 Café + 10 Ramen</p>
+        </div>
+        <input type="button" name="reset" value="Réinitialiser" id="reset-button">
+        <input type="button" value="Calculer" id="calculate-button"><br><br>
+        <span id="total">0</span>$<br>
+        <hr id="line">
+        <textarea name="sum" id="sum" cols="62" rows="5" readonly="readonly"></textarea>
+    </div>
+    <div class="option-container">
+        <input type="checkbox" name="livraison" id="delivery" class="option" onclick="onCheck(this);">
+        <label id="label-delivery" for="delivery">VIP</label><br>
+        <input type="checkbox" name="entreprise" id="company" class="option" value="Entreprise" onclick="onCheck(this);">
+        <label id="label-company" for="company">Drive/Terrasse</label><br>
+    </div>
+
+    <script src="./js/auto-remove.js"></script>
+    <script src="./js/check.js"></script>
+    <script src="./js/calculate.js"></script>
+    <script src="./js/blur.js"></script>
+    <script src="./js/click.js"></script>
+    <script src="./js/reset.js"></script>
+</body>
+</html>
