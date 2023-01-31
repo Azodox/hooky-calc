@@ -58,7 +58,7 @@ calculate.addEventListener('click', function(e) {
 
     result.innerText = parseInt(total)
     sum.innerText = 
-    (delivery ? "[Livraison] " : "")
+    (delivery ? "[VIP] " : "")
     + (company.checked ? "[Réduction 10%] ": "")
     + summary
     + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")
