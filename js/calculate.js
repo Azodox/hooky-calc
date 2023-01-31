@@ -17,7 +17,7 @@ var tip = document.getElementById('tip-amount')
 var data = '{"drinks":[{"sushis_crabe":{"normal":85,"delivery":95},"sushis_saumon":{"normal":85,"delivery":95},"sushis_crevette":{"normal":85,"delivery":95},"cesar":{"normal":70,"delivery":80,"publicService":20},"jardin":{"normal":86,"delivery":96},"turbot":{"normal":86,"delivery":96},"saumon":{"normal":81,"delivery":91},"morue":{"normal":82,"delivery":92},"mojito":{"normal":185,"delivery":195},"whisky":{"normal":265,"delivery":275},"vodka":{"normal":265,"delivery":275},"martini":{"normal":180,"delivery":190},"muffins":{"normal":60,"delivery":65},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100},"10-10":{"normal":1000}}]}'
 var prices = JSON.parse(data)
 
-var simplifiedData = '{"sushis_crabe":"sushicrabe","sushis_saumon":"sushisaumon","sushis_crevette":"sushicrevette","cesar":"saladecesar","jardin":"saladejardin","turbot":"Filetturbot","saumon":"filetsaumon","iced_coffee":"cg","morue":"filetmorue","mojito":"cocktailmojito","vodka":"vodka","whisky":"whisky","martini":"martini","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra","10-10":"tenten"}'
+var simplifiedData = '{"sushis_crabe":"sushicrabe","sushis_saumon":"sushisaumon","sushis_crevette":"sushicrevette","cesar":"saladecesar","jardin":"saladejardin","turbot":"filetturbot","saumon":"filetsaumon","iced_coffee":"cg","morue":"filetmorue","mojito":"cocktailmojito","vodka":"vodka","whisky":"whisky","martini":"martini","hazelnut_iced_coffee":"cgn","mochis":"mo","ramen":"ra","10-10":"tenten"}'
 var simplified = JSON.parse(simplifiedData)
 
 calculate.addEventListener('click', function(e) {
