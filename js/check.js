@@ -4,7 +4,7 @@
  * And if you uncheck it, it will comeback to white.
  */
 
-var delivery = document.getElementById("delivery")
+var delivery = document.getElementById("del")
 var company = document.getElementById("company")
 
 function onCheck(element){

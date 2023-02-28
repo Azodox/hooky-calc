@@ -14,14 +14,14 @@ var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
 
-var data = '{"drinks":[{"sushis_crabe":{"normal":75,"delivery":85},"sushis_saumon":{"normal":75,"delivery":85},"sushis_crevette":{"normal":75,"delivery":85},"cesar":{"normal":60,"delivery":70,"publicService":20},"jardin":{"normal":76,"delivery":86},"turbot":{"normal":76,"delivery":86},"saumon":{"normal":71,"delivery":81},"morue":{"normal":72,"delivery":82},"mojito":{"normal":175,"delivery":185},"whisky":{"normal":255,"delivery":265},"vodka":{"normal":255,"delivery":265},"martini":{"normal":170,"delivery":180},"shitdrinks":{"normal":15,"delivery":15},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100},"10-10":{"normal":1000}}]}'
+var data = '{"drinks":[{"sushis_crabe":{"normal":75,"delivery":75},"sushis_saumon":{"normal":75,"delivery":75},"sushis_crevette":{"normal":75,"delivery":75},"cesar":{"normal":60,"delivery":60,"publicService":20},"jardin":{"normal":76,"delivery":76},"turbot":{"normal":76,"delivery":76},"saumon":{"normal":71,"delivery":71},"morue":{"normal":72,"delivery":72},"mojito":{"normal":175,"delivery":185},"whisky":{"normal":255,"delivery":265},"vodka":{"normal":255,"delivery":265},"martini":{"normal":170,"delivery":180},"shitdrinks":{"normal":15,"delivery":15},"hazelnut_iced_coffee":{"normal":90,"delivery":100},"mochis":{"normal":60,"delivery":65},"ramen":{"normal":80,"delivery":100},"10-10":{"normal":1000}}]}'
 var prices = JSON.parse(data)
 
 var simplifiedData = '{"sushis_crabe":"sushicrabe","sushis_saumon":"sushisaumon","sushis_crevette":"sushicrevette","cesar":"saladecesar","jardin":"saladejardin","turbot":"filetturbot","saumon":"filetsaumon","iced_coffee":"cg","morue":"filetmorue","mojito":"cocktailmojito","vodka":"vodka","whisky":"whisky","martini":"martini","hazelnut_iced_coffee":"cgn","mochis":"mo","shitdrinks":"boisson","10-10":"tenten"}'
 var simplified = JSON.parse(simplifiedData)
 
 calculate.addEventListener('click', function(e) {
-    var delivery = document.getElementById("delivery").checked
+    var newdel = document.getElementById("del").checked
     var total = 0;
     var summary = "";
     drinksContainer.forEach(function(drinks) {
@@ -35,12 +35,7 @@ calculate.addEventListener('click', function(e) {
                             if(d.disabled){
                                 return
                             }
-
-                            if(delivery){
-                                total += d.value * price['delivery']
-                            } else {
-                                total += d.value * price['normal']
-                            }
+                            total += d.value * price['normal']
                             if(d.value != 0) summary += d.value + simplified[d.parentElement.id.replace("-container", "").replaceAll("-", "_")] + " "
                         }
                     })
@@ -48,7 +43,11 @@ calculate.addEventListener('click', function(e) {
             })
         }
     })
-
+    
+    if(newdel) 
+    { 
+        total += 100 
+    }
     if(company.checked){
         total *= 0.9
     }
@@ -58,7 +57,7 @@ calculate.addEventListener('click', function(e) {
 
     result.innerText = parseInt(total)
     sum.innerText = 
-    (delivery ? "[VIP] " : "")
+    (newdel ? "[Livraison] " : "")
     + (company.checked ? "[Réduction 10%] ": "")
     + summary
     + (tip.value == 0 ? "" : "(" + tip.value + "$ pb)")

@@ -14,8 +14,8 @@ var companyLabel = document.getElementById('label-company')
 var result = document.getElementById('total')
 var sum = document.getElementById('sum')
 var tip = document.getElementById('tip-amount')
-var delivery = document.getElementById("delivery")
-var deliveryLabel = document.getElementById("label-delivery")
+var delivery = document.getElementById("del")
+var deliveryLabel = document.getElementById("label-del")
 
 /*
  * Then we add a click event listener.
